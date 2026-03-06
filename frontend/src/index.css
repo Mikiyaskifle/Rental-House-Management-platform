@@ -1,0 +1,387 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Enhanced Button Styles */
+.btn {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-offset-2 transform hover:scale-105 active:scale-95;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 focus:ring-primary-300 shadow-medium hover:shadow-large;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 hover:from-gray-200 hover:to-gray-300 focus:ring-gray-300 shadow-soft hover:shadow-medium;
+}
+
+.btn-success {
+  @apply bg-gradient-to-r from-success-500 to-success-600 text-white hover:from-success-600 hover:to-success-700 focus:ring-success-300 shadow-medium hover:shadow-large;
+}
+
+.btn-warning {
+  @apply bg-gradient-to-r from-warning-500 to-warning-600 text-white hover:from-warning-600 hover:to-warning-700 focus:ring-warning-300 shadow-medium hover:shadow-large;
+}
+
+.btn-error {
+  @apply bg-gradient-to-r from-error-500 to-error-600 text-white hover:from-error-600 hover:to-error-700 focus:ring-error-300 shadow-medium hover:shadow-large;
+}
+
+.btn-outline {
+  @apply bg-transparent border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white focus:ring-primary-300;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-primary-600 hover:bg-primary-50 focus:ring-primary-300;
+}
+
+/* Enhanced Card Styles */
+.card {
+  @apply bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 border border-gray-100 hover:border-primary-200;
+}
+
+.card-dark {
+  @apply bg-dark-card rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300 border border-gray-700;
+}
+
+/* Enhanced Input Styles */
+.input {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all duration-300 bg-white text-gray-900 placeholder-gray-500;
+}
+
+.input-dark {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-600 focus:border-primary-400 focus:ring-2 focus:ring-primary-200 transition-all duration-300 bg-dark-surface text-gray-100 placeholder-gray-400;
+}
+
+/* Enhanced Badge Styles */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.badge-primary {
+  @apply badge bg-primary-100 text-primary-800;
+}
+
+.badge-secondary {
+  @apply badge bg-secondary-100 text-secondary-800;
+}
+
+.badge-success {
+  @apply badge bg-success-100 text-success-800;
+}
+
+.badge-warning {
+  @apply badge bg-warning-100 text-warning-800;
+}
+
+.badge-error {
+  @apply badge bg-error-100 text-error-800;
+}
+
+/* Enhanced Text Styles */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+}
+
+.text-gradient-purple {
+  @apply bg-gradient-to-r from-primary-500 to-secondary-600 bg-clip-text text-transparent;
+}
+
+/* Enhanced Layout Styles */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.glass-effect {
+  @apply bg-white/80 backdrop-blur-lg border border-white/20;
+}
+
+.glass-effect-dark {
+  @apply bg-dark-card/80 backdrop-blur-lg border border-dark-tertiary/20;
+}
+
+/* Enhanced Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s infinite;
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-glow;
+}
+
+.hover-glow-purple {
+  @apply transition-all duration-300 hover:shadow-glow-purple;
+}
+
+/* Enhanced Status Indicators */
+.status-available {
+  @apply bg-success-100 text-success-800 border border-success-200;
+}
+
+.status-unavailable {
+  @apply bg-error-100 text-error-800 border border-error-200;
+}
+
+.status-pending {
+  @apply bg-warning-100 text-warning-800 border border-warning-200;
+}
+
+/* Enhanced Rating Stars */
+.rating-star {
+  @apply transition-colors duration-200;
+}
+
+.rating-star.filled {
+  @apply text-yellow-400 fill-current;
+}
+
+.rating-star.empty {
+  @apply text-gray-300;
+}
+
+/* Enhanced Navigation Styles */
+.nav-link {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-100 focus:text-primary-700;
+}
+
+.nav-link.active {
+  @apply bg-primary-100 text-primary-700;
+}
+
+/* Dark Mode Enhancements */
+.dark body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.dark .card {
+  @apply card-dark;
+}
+
+.dark .input {
+  @apply input-dark;
+}
+
+.dark .glass-effect {
+  @apply glass-effect-dark;
+}
+
+/* Enhanced Dark Mode Header Styling */
+.dark nav {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  border-color: #475569 !important;
+}
+
+.dark .bg-white\/90 {
+  background: rgba(30, 41, 59, 0.9) !important;
+}
+
+.dark .bg-white\/80 {
+  background: rgba(30, 41, 59, 0.8) !important;
+}
+
+.dark .text-gray-900 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .hover\\:bg-gray-100:hover {
+  background-color: #334155 !important;
+}
+
+.dark .hover\\:text-primary-600:hover {
+  color: #60a5fa !important;
+}
+
+/* About Section - Special dark mode styling */
+.dark .about-section {
+  /* In dark mode, give it vibrant gradient colors */
+  background: linear-gradient(to bottom right, #2563eb, #9333ea, #1d4ed8) !important;
+}
+
+/* About Section text colors */
+.about-section h2 {
+  color: #000000 !important; /* Black in light mode */
+}
+
+.about-section p {
+  color: #000000 !important; /* Black in light mode */
+}
+
+.about-section h3 {
+  color: #000000 !important; /* Black in light mode */
+}
+
+/* Dark mode text colors */
+.dark .about-section h2 {
+  color: #ffffff !important; /* White in dark mode */
+}
+
+.dark .about-section p {
+  color: #ffffff !important; /* White in dark mode */
+}
+
+.dark .about-section h3 {
+  color: #ffffff !important; /* White in dark mode */
+}
+
+/* Responsive Typography */
+@media (max-width: 475px) {
+  .text-responsive {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 476px) and (max-width: 639px) {
+  .text-responsive {
+    font-size: 0.95rem;
+    line-height: 1.35rem;
+  }
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 639px) {
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 639px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-full {
+    width: 100% !important;
+  }
+  
+  .mobile-center {
+    text-align: center !important;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+}
+
+/* Touch-friendly buttons */
+@media (max-width: 639px) {
+  .btn-mobile {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Responsive images */
+@media (max-width: 639px) {
+  .img-mobile {
+    height: 10rem !important;
+  }
+}
+
+.dark ::-webkit-scrollbar-track {
+  @apply bg-dark-tertiary;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-dark-secondary rounded-full;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-primary;
+}
+
+/* Enhanced Focus Styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Enhanced Loading States */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+.dark .loading-skeleton {
+  @apply animate-pulse bg-dark-tertiary rounded;
+}
+
+/* Enhanced Transitions */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-colors {
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-transform {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
